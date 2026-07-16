@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navya Reddy | Cybersecurity & AI Portfolio</title>
+    
+    <!-- Favicon using SVG Data URI with Initials 'NR' -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%234f46e5'/%3E%3Ctext x='50%25' y='57%25' font-size='40' font-family='monospace' font-weight='bold' fill='%23ffffff' dominant-baseline='middle' text-anchor='middle'%3ENR%3C/text%3E%3C/svg%3E">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        sans: ['"Work Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#080c14',
+                            card: '#0f172a',
+                            accent: '#6366f1', /* Electric Indigo */
+                            secondary: '#a5b4fc',
+                            border: '#1e293b',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: JetBrains Mono & Work Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #080c14;
+            color: #f1f5f9;
+        }
+        .font-mono-heading {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        /* Custom timeline track drawing animation */
+        .timeline-line {
+            background: linear-gradient(to bottom, #6366f1 0%, #4f46e5 50%, #1e1b4b 100%);
+        }
+        /* Reveal animation styling */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Dynamic neon pulse glow */
+        .pulse-glow {
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden selection:bg-indigo-600 selection:text-white">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-indigo-500 to-indigo-300 z-50 transition-all duration-75" style="width: 0%"></div>
+
+    <!-- Background decorative grids -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 pointer-events-none"></div>
+
+    <header class="sticky top-0 z-40 w-full border-b border-cyber-border/80 bg-cyber-bg/80 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="font-mono text-cyber-accent font-bold text-xl">&lt;NR_&gt;</span>
+                <span class="font-mono text-sm tracking-wider hidden sm:inline-block text-cyber-muted">CYBERSECURITY UNDERGRAD</span>
+            </div>
+            <nav class="flex items-center space-x-6 text-sm font-mono">
+                <a href="#journey" class="hover:text-cyber-accent transition-colors">JOURNEY</a>
+                <a href="#skills" class="hover:text-cyber-accent transition-colors">SKILLS</a>
+                <a href="#contact" class="hover:text-cyber-accent transition-colors">CONNECT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative py-12">
+        <section class="min-h-[70vh] flex flex-col justify-center py-12 relative">
+            <div class="relative z-10 space-y-6 max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-indigo-950/40 border border-indigo-500/30 px-3 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    <span class="font-mono text-xs text-indigo-300 tracking-widest uppercase">Securing Digital Horizons</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight font-mono-heading">
+                    NAVYA REDDY
+                </h1>
+                
+                <p class="text-xl sm:text-2xl text-indigo-300 font-mono font-medium">
+                    Cybersecurity Student &amp; AI Developer
+                </p>
+                
+                <p class="text-cyber-muted text-lg leading-relaxed max-w-2xl font-light">
+                    Cybersecurity undergraduate with a strong foundation in Java, Python, SQL, database management, and web technologies. Experienced in software development, AI-based forecasting, and designing custom machine learning tools including Artificial Neural Networks (ANN).
+                </p>
+
+                <!-- Interactive Profile quick tags -->
+                <div class="flex flex-wrap gap-3 pt-4">
+                    <span class="px-3 py-1 bg-cyber-card border border-cyber-border rounded-md text-xs font-mono flex items-center text-cyber-muted">
+                        <i data-lucide="shield" class="w-3.5 h-3.5 mr-1 text-cyber-accent"></i> B.Tech Cybersecurity
+                    </span>
+                    <span class="px-3 py-1 bg-cyber-card border border-cyber-border rounded-md text-xs font-mono flex items-center text-cyber-muted">
+                        <i data-lucide="cpu" class="w-3.5 h-3.5 mr-1 text-cyber-accent"></i> AI &amp; ML
+                    </span>
+                    <span class="px-3 py-1 bg-cyber-card border border-cyber-border rounded-md text-xs font-mono flex items-center text-cyber-muted">
+                        <i data-lucide="database" class="w-3.5 h-3.5 mr-1 text-cyber-accent"></i> SQLite Specialist
+                    </span>
+                </div>
+
+                <div class="pt-8 flex flex-wrap gap-4">
+                    <a href="#journey" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-mono text-sm font-semibold rounded-md transition-all flex items-center gap-2 pulse-glow">
+                        Explore My Journey <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#contact" class="px-6 py-3 bg-cyber-card hover:bg-cyber-card/80 border border-cyber-border text-cyber-text font-mono text-sm rounded-md transition-all flex items-center gap-2">
+                        Get In Touch <i data-lucide="mail" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Glowing decorative background element -->
+            <div class="absolute right-0 top-1/4 w-[350px] h-[350px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        </section>
+
+        <!-- THE JOURNEY (VERTICAL TIMELINE ARCHETYPE) -->
+        <section id="journey" class="py-20 relative">
+            <div class="mb-16 text-center sm:text-left">
+                <p class="font-mono text-xs text-cyber-accent uppercase tracking-widest mb-2">Chronological Roadmap</p>
+                <h2 class="text-3xl font-bold font-mono-heading tracking-tight sm:text-4xl">My Journey</h2>
+                <div class="w-12 h-1 bg-cyber-accent mt-4 mx-auto sm:mx-0"></div>
+            </div>
+
+            <!-- Timeline Outer Container -->
+            <div class="relative max-w-3xl mx-auto sm:ml-0 md:ml-12">
+                <!-- Vertical continuous line -->
+                <div class="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 timeline-line opacity-60"></div>
+
+                <!-- TIMELINE STEP 1: Current B.Tech Education -->
+                <div class="relative pl-12 sm:pl-16 pb-12 reveal-element">
+                    <!-- Timeline Node Indicator -->
+                    <div class="absolute left-2.5 sm:left-4.5 top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-indigo-950 flex items-center justify-center animate-pulse"></div>
+                    
+                    <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:border-indigo-500/50 transition-all duration-300">
+                        <span class="text-xs font-mono bg-indigo-900/40 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded">2023 — 2027</span>
+                        <h3 class="text-xl font-bold mt-3 text-cyber-text font-mono-heading">B.Tech in Cybersecurity</h3>
+                        <p class="text-sm text-indigo-400 font-mono mt-1">Geethanjali College of Engineering and Technology</p>
+                        <div class="mt-4 flex items-center space-x-2 text-sm bg-cyber-bg/60 p-2.5 rounded border border-cyber-border/40">
+                            <span class="text-cyber-accent font-bold font-mono">CGPA:</span>
+                            <span class="text-cyber-text font-mono">8.40</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIMELINE STEP 2: Internship -->
+                <div class="relative pl-12 sm:pl-16 pb-12 reveal-element">
+                    <div class="absolute left-2.5 sm:left-4.5 top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-indigo-950"></div>
+                    
+                    <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:border-indigo-500/50 transition-all duration-300">
+                        <span class="text-xs font-mono bg-indigo-900/40 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded">AI Experience</span>
+                        <h3 class="text-xl font-bold mt-3 text-cyber-text font-mono-heading">AI Intern</h3>
+                        <p class="text-sm text-indigo-400 font-mono mt-1">Skilldizire</p>
+                        
+                        <p class="text-sm text-cyber-muted mt-3 leading-relaxed">
+                            Engineered an AI-powered weather forecasting application using Python. Spearheaded crucial modules: data preprocessing, applying neural networking techniques, and API configuration to load, structure, and stream forecast pipelines dynamically.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 bg-cyber-bg text-cyber-muted rounded text-xs font-mono">Python</span>
+                            <span class="px-2 py-0.5 bg-cyber-bg text-cyber-muted rounded text-xs font-mono">API Integration</span>
+                            <span class="px-2 py-0.5 bg-cyber-bg text-cyber-muted rounded text-xs font-mono">AI Models</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIMELINE STEP 3: Major Project (Secure Digital Evidence Management) -->
+                <div class="relative pl-12 sm:pl-16 pb-12 reveal-element">
+                    <div class="absolute left-2.5 sm:left-4.5 top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-indigo-950"></div>
+                    
+                    <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:border-indigo-500/50 transition-all duration-300">
+                        <span class="text-xs font-mono bg-indigo-900/40 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded">Cybersecurity Project</span>
+                        <h3 class="text-xl font-bold mt-3 text-cyber-text font-mono-heading">Secure Digital Evidence Management System</h3>
+                        <p class="text-xs text-cyber-muted font-mono mt-1">Ongoing Framework</p>
+                        
+                        <p class="text-sm text-cyber-muted mt-3 leading-relaxed">
+                            Developed a secure web architecture for digital evidence validation. Features SHA-256 integrity checks, custom blockchain/cryptographic signatures, chain-of-custody tracking, and threat prediction models built with Artificial Neural Networks (ANN).
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 bg-indigo-950/60 text-indigo-300 rounded text-xs font-mono">Python</span>
+                            <span class="px-2 py-0.5 bg-indigo-950/60 text-indigo-300 rounded text-xs font-mono">Flask</span>
+                            <span class="px-2 py-0.5 bg-indigo-950/60 text-indigo-300 rounded text-xs font-mono">SQLite</span>
+                            <span class="px-2 py-0.5 bg-indigo-950/60 text-indigo-300 rounded text-xs font-mono">SHA-256</span>
+                            <span class="px-2 py-0.5 bg-indigo-950/60 text-indigo-300 rounded text-xs font-mono">ANN</span>
+                        </div>
+                        <div class="mt-4 flex items-center space-x-4">
+                            <a href="https://github.com/navyareddy-02" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-cyber-accent hover:text-indigo-400 flex items-center gap-1">
+                                <i data-lucide="github" class="w-3.5 h-3.5"></i> Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIMELINE STEP 4: Basic Vulnerability Scanner -->
+                <div class="relative pl-12 sm:pl-16 pb-12 reveal-element">
+                    <div class="absolute left-2.5 sm:left-4.5 top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-indigo-950"></div>
+                    
+                    <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:border-indigo-500/50 transition-all duration-300">
+                        <span class="text-xs font-mono bg-indigo-900/40 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded">Security Tool</span>
+                        <h3 class="text-xl font-bold mt-3 text-cyber-text font-mono-heading">Basic Vulnerability Scanner</h3>
+                        <p class="text-xs text-cyber-muted font-mono mt-1">Utility Development</p>
+                        
+                        <p class="text-sm text-cyber-muted mt-3 leading-relaxed">
+                            Wrote a specialized Python tool scanning system ports for dynamic threats, parsing banner responses to cross-reference common vulnerability databases. Designed to help automate network assessment processes.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2 py-0.5 bg-cyber-bg text-cyber-muted rounded text-xs font-mono">Python</span>
+                            <span class="px-2 py-0.5 bg-cyber-bg text-cyber-muted rounded text-xs font-mono">Sockets</span>
+                            <span class="px-2 py-0.5 bg-cyber-bg text-cyber-muted rounded text-xs font-mono">Network Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIMELINE STEP 5: Intermediate Education -->
+                <div class="relative pl-12 sm:pl-16 pb-12 reveal-element">
+                    <div class="absolute left-2.5 sm:left-4.5 top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-indigo-950"></div>
+                    
+                    <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:border-indigo-500/50 transition-all duration-300">
+                        <span class="text-xs font-mono bg-indigo-900/40 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded">High School Certification</span>
+                        <h3 class="text-xl font-bold mt-3 text-cyber-text font-mono-heading">Intermediate Education</h3>
+                        <p class="text-sm text-indigo-400 font-mono mt-1">Goutham Junior College</p>
+                        <div class="mt-4 flex items-center space-x-2 text-sm bg-cyber-bg/60 p-2.5 rounded border border-cyber-border/40">
+                            <span class="text-cyber-accent font-bold font-mono">Score:</span>
+                            <span class="text-cyber-text font-mono">990 / 1000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIMELINE STEP 6: Certifications Hub -->
+                <div class="relative pl-12 sm:pl-16 reveal-element">
+                    <div class="absolute left-2.5 sm:left-4.5 top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-indigo-950"></div>
+                    
+                    <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:border-indigo-500/50 transition-all duration-300">
+                        <span class="text-xs font-mono bg-indigo-900/40 text-indigo-300 border border-indigo-500/20 px-2 py-0.5 rounded">Professional Certifications</span>
+                        <h3 class="text-xl font-bold mt-3 text-cyber-text font-mono-heading mb-4">Credentials &amp; Specialized Bootcamps</h3>
+                        
+                        <ul class="space-y-4">
+                            <li class="border-l-2 border-indigo-500/50 pl-3">
+                                <h4 class="text-sm font-semibold text-cyber-text">ISEA Phase-III Bootcamp on 5G Security (2026)</h4>
+                                <p class="text-xs text-cyber-muted font-mono">Center for Cryptography &amp; Cybersecurity, Dept. of CSE, IIT Hyderabad</p>
+                            </li>
+                            <li class="border-l-2 border-indigo-500/50 pl-3">
+                                <h4 class="text-sm font-semibold text-cyber-text">Oracle Certified Java Programmer</h4>
+                                <p class="text-xs text-cyber-muted font-mono">Oracle</p>
+                            </li>
+                            <li class="border-l-2 border-indigo-500/50 pl-3">
+                                <h4 class="text-sm font-semibold text-cyber-text">Infosys Certified SQL Specialist</h4>
+                                <p class="text-xs text-cyber-muted font-mono">Infosys</p>
+                            </li>
+                            <li class="border-l-2 border-indigo-500/50 pl-3">
+                                <h4 class="text-sm font-semibold text-cyber-text">Hashgraph Developer Course</h4>
+                                <p class="text-xs text-cyber-muted font-mono">The Hashgraph Association</p>
+                            </li>
+                            <li class="border-l-2 border-indigo-500/50 pl-3">
+                                <h4 class="text-sm font-semibold text-cyber-text">Hacking &amp; Mentorship + Milestone-2, AminoVerse</h4>
+                                <p class="text-xs text-cyber-muted font-mono">Mahindra University</p>
+                            </li>
+                            <li class="border-l-2 border-indigo-500/50 pl-3">
+                                <h4 class="text-sm font-semibold text-cyber-text">Graph Theory Programming Camp</h4>
+                                <p class="text-xs text-cyber-muted font-mono">Algo University</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="py-20 border-t border-cyber-border/40 relative">
+            <div class="mb-16">
+                <p class="font-mono text-xs text-cyber-accent uppercase tracking-widest mb-2">Technical Mastery</p>
+                <h2 class="text-3xl font-bold font-mono-heading tracking-tight sm:text-4xl">Skills &amp; Specializations</h2>
+                <div class="w-12 h-1 bg-cyber-accent mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Category 1: Languages -->
+                <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:shadow-indigo-950/20 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="p-2 bg-indigo-950/50 rounded text-indigo-400">
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-mono-heading text-cyber-text">Programming</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-mono mb-1 text-cyber-muted">
+                                <span>Java</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="w-full bg-cyber-bg rounded-full h-1.5">
+                                <div class="bg-indigo-500 h-1.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-mono mb-1 text-cyber-muted">
+                                <span>Python</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="w-full bg-cyber-bg rounded-full h-1.5">
+                                <div class="bg-indigo-500 h-1.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-mono mb-1 text-cyber-muted">
+                                <span>SQL &amp; SQLite</span>
+                                <span>Certified Specialist</span>
+                            </div>
+                            <div class="w-full bg-cyber-bg rounded-full h-1.5">
+                                <div class="bg-indigo-500 h-1.5 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Cybersec Tools -->
+                <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:shadow-indigo-950/20 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="p-2 bg-indigo-950/50 rounded text-indigo-400">
+                            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-mono-heading text-cyber-text">Cybersecurity</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded text-xs font-mono text-cyber-muted hover:border-indigo-500/50 transition-colors">Kali Linux</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded text-xs font-mono text-cyber-muted hover:border-indigo-500/50 transition-colors">Wireshark</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded text-xs font-mono text-cyber-muted hover:border-indigo-500/50 transition-colors">Network Analysis</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded text-xs font-mono text-cyber-muted hover:border-indigo-500/50 transition-colors">5G Security Architectures</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded text-xs font-mono text-cyber-muted hover:border-indigo-500/50 transition-colors">Vulnerability Scanning</span>
+                        <span class="px-3 py-1.5 bg-cyber-bg border border-cyber-border rounded text-xs font-mono text-cyber-muted hover:border-indigo-500/50 transition-colors">SHA-256 Encryption</span>
+                    </div>
+                </div>
+
+                <!-- Category 3: Machine Learning & Core -->
+                <div class="bg-cyber-card border border-cyber-border rounded-lg p-6 hover:shadow-indigo-950/20 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="p-2 bg-indigo-950/50 rounded text-indigo-400">
+                            <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold font-mono-heading text-cyber-text">Intelligence &amp; Web</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs font-mono text-cyber-muted block mb-1">AI / ML Frameworks:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-1 bg-indigo-950/30 text-indigo-300 rounded text-[10px] font-mono border border-indigo-500/10">ANN</span>
+                                <span class="px-2 py-1 bg-indigo-950/30 text-indigo-300 rounded text-[10px] font-mono border border-indigo-500/10">Random Forest</span>
+                                <span class="px-2 py-1 bg-indigo-950/30 text-indigo-300 rounded text-[10px] font-mono border border-indigo-500/10">SVM</span>
+                                <span class="px-2 py-1 bg-indigo-950/30 text-indigo-300 rounded text-[10px] font-mono border border-indigo-500/10">Predictive Modeling</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono text-cyber-muted block mb-1">Web Development:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-1 bg-indigo-950/30 text-indigo-300 rounded text-[10px] font-mono border border-indigo-500/10">HTML5</span>
+                                <span class="px-2 py-1 bg-indigo-950/30 text-indigo-300 rounded text-[10px] font-mono border border-indigo-500/10">CSS3</span>
+                                <span class="px-2 py-1 bg-indigo-950/30 text-indigo-300 rounded text-[10px] font-mono border border-indigo-500/10">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT & PROFILES -->
+        <section id="contact" class="py-20 border-t border-cyber-border/40">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <p class="font-mono text-xs text-cyber-accent uppercase tracking-widest mb-2">Initialize Communication</p>
+                    <h2 class="text-3xl font-bold font-mono-heading tracking-tight sm:text-4xl">Let's Connect</h2>
+                    <p class="mt-4 text-cyber-muted leading-relaxed max-w-md">
+                        Have opportunities for a cybersecurity residency, AI project collaboration, or just looking to connect? Reach out using the channels listed.
+                    </p>
+                    
+                    <div class="mt-8 space-y-4">
+                        <a href="mailto:sheelamnavya937@gmail.com" class="flex items-center space-x-3 p-4 bg-cyber-card border border-cyber-border rounded-lg hover:border-indigo-500/50 transition-all max-w-sm">
+                            <i data-lucide="mail" class="w-5 h-5 text-cyber-accent"></i>
+                            <div class="text-sm">
+                                <p class="text-xs text-cyber-muted font-mono uppercase">Direct Email</p>
+                                <p class="font-semibold text-cyber-text">sheelamnavya937@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center space-x-3 p-4 bg-cyber-card border border-cyber-border rounded-lg max-w-sm">
+                            <i data-lucide="phone" class="w-5 h-5 text-cyber-accent"></i>
+                            <div class="text-sm">
+                                <p class="text-xs text-cyber-muted font-mono uppercase">Phone Line</p>
+                                <p class="font-semibold text-cyber-text">+91 7569833847</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold font-mono-heading text-cyber-text mb-6">Coding Profiles &amp; Social Platforms</h3>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- LinkedIn Profile -->
+                        <a href="https://linkedin.com/in/navya-reddy-7b72593aa" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 bg-cyber-card border border-cyber-border rounded-lg hover:bg-cyber-bg/50 transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6 text-indigo-400 mr-3"></i>
+                            <div>
+                                <span class="text-sm font-semibold text-cyber-text font-mono">LinkedIn</span>
+                                <span class="text-xs block text-cyber-muted">Professional Network</span>
+                            </div>
+                        </a>
+
+                        <!-- GitHub Profile -->
+                        <a href="https://github.com/navyareddy-02" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 bg-cyber-card border border-cyber-border rounded-lg hover:bg-cyber-bg/50 transition-colors">
+                            <i data-lucide="github" class="w-6 h-6 text-indigo-400 mr-3"></i>
+                            <div>
+                                <span class="text-sm font-semibold text-cyber-text font-mono">GitHub</span>
+                                <span class="text-xs block text-cyber-muted">Code Repository</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-cyber-border/80 bg-cyber-bg py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-xs text-cyber-muted font-mono">
+                &copy; 2026 Navya Reddy. Calculated Journey Portfolio Architecture. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts & Animations logic -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Reveal timeline milestones gracefully on scroll
+        const revealElements = document.querySelectorAll('.reveal-element');
+        
+        const revealOnScroll = () => {
+            const triggerBottom = (window.innerHeight / 10) * 8.5;
+            
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('active');
+                } else {
+                    element.classList.remove('active'); // Dynamic effect back-and-forth
+                }
+            });
+        };
+
+        // Scroll Progress Bar Logic
+        const handleScrollProgressBar = () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scrollProgress").style.width = scrolled + "%";
+        };
+
+        // Combine Scroll Listeners
+        window.addEventListener('scroll', () => {
+            revealOnScroll();
+            handleScrollProgressBar();
+        });
+
+        // Trigger once immediately on page load
+        window.addEventListener('load', () => {
+            revealOnScroll();
+            handleScrollProgressBar();
+        });
+    </script>
+</body>
+</html>
